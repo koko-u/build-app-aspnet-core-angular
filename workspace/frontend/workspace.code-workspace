@@ -1,0 +1,41 @@
+{
+  "folders": [
+    {
+      "path": "."
+    },
+    {
+      "path": "dating-app"
+    }
+  ],
+  "settings": {
+    "files.autoSave": "afterDelay",
+    "editor.fontFamily": "'Fira Code', 'Droid Sans Mono', 'monospace', monospace",
+    "editor.cursorStyle": "block",
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.foldingImportsByDefault": true,
+    "editor.formatOnPaste": true,
+    "editor.formatOnSave": true,
+    "editor.minimap.enabled": false,
+    "auto-close-tag.disableOnLanguage": [
+      "typescript"
+    ],
+    "editor.fontLigatures": true,
+    "workbench.colorTheme": "Monokai"
+  },
+  "extensions": {
+    "recommendations": [
+      "angular.ng-template",
+      "christian-kohler.npm-intellisense",
+      "christian-kohler.path-intellisense",
+      "dbaeumer.vscode-eslint",
+      "editorconfig.editorconfig",
+      "esbenp.prettier-vscode",
+      "lfs.vscode-emacs-friendly",
+      "ms-ceintl.vscode-language-pack-ja",
+      "nrwl.angular-console",
+      "steoates.autoimport",
+      "vue.volar",
+      "zignd.html-css-class-completion"
+    ]
+  }
+}

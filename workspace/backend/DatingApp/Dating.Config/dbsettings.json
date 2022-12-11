@@ -1,0 +1,6 @@
+{
+    "$schema": "https://json.schemastore.org/appsettings",
+    "ConnectionStrings": {
+        "Default": "Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=DatingDb;Integrated Security=True;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False"
+    }
+}

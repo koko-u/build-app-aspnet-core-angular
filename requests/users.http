@@ -1,0 +1,14 @@
+@baseUrl = http://localhost:5001/api
+
+### Get all users
+
+GET {{baseUrl}}/users HTTP/1.1
+
+### Get Single user
+@id = e59403f4-677b-441f-b104-66d05ba54efb
+
+GET {{baseUrl}}/users/{{id}} HTTP/1.1
+
+### Get Non exits user
+
+GET {{baseUrl}}/users/50fd4622-a793-4d0f-ad20-b27975ce0804

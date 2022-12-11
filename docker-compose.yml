@@ -1,0 +1,68 @@
+version: '3.2'
+services:
+  aspnet-core:
+    build:
+      context: ./context/dotnet6
+    container_name: aspnet-core
+    working_dir: /usr/workspace
+    volumes:
+      - type: bind
+        source: ./workspace/backend
+        target: /usr/workspace
+      - type: volume
+        source: nuget-packages
+        target: /root/.nuget/packages
+        volume:
+          nocopy: true
+      - type: volume
+        source: user-secrets
+        target: /root/.microsoft/usersecrets
+        volume:
+          nocopy: true
+      - type: volume
+        source: data-protection-keys
+        target: /root/.aspnet/DataProtection-Keys
+        volume:
+          nocopy: true
+    tty: true
+    expose:
+      - "5001"
+  angular-app:
+    build:
+      context: ./context/node-v18
+    container_name: angular-app
+    working_dir: /usr/workspace
+    volumes:
+      - type: bind
+        source: ./workspace/frontend
+        target: /usr/workspace
+      # - type: volume
+      #   source: app-node_modules
+      #   target: /usr/workspace/dating-app/node_modules
+      #   volume:
+      #     nocopy: true
+    tty: true
+  db:
+    image: mcr.microsoft.com/mssql/server:2019-CU16-GDR1-ubuntu-20.04
+    container_name: db
+    volumes:
+      - type: volume
+        source: db-data
+        target: /var/opt/mssql
+    environment:
+      ACCEPT_EULA: Y
+      SA_PASSWORD_FILE: /run/secrets/db_password
+      MSSQL_PID: Developer
+    ports:
+      - "1433:1433"
+    secrets:
+      - db_password
+volumes:
+  db-data:
+  nuget-packages:
+  app-node_modules:
+  user-secrets:
+  data-protection-keys:
+secrets:
+  db_password:
+    file: ./secrets/db_password.txt

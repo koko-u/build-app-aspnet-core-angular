@@ -1,0 +1,50 @@
+{
+  "folders": [
+    {
+      "path": "."
+    }
+  ],
+  "settings": {
+    "files.autoSave": "afterDelay",
+    "editor.fontFamily": "'Fira Code', 'Droid Sans Mono', 'monospace', monospace",
+    "editor.cursorStyle": "block",
+    "editor.bracketPairColorization.enabled": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.foldingImportsByDefault": true,
+    "editor.formatOnPaste": true,
+    "editor.formatOnSave": true,
+    "editor.minimap.enabled": false,
+    "auto-close-tag.disableOnLanguage": [
+      "typescript"
+    ],
+    "editor.fontLigatures": true,
+    "editor.bracketPairColorization.independentColorPoolPerBracketType": true,
+    "editor.cursorSmoothCaretAnimation": true,
+    "workbench.colorTheme": "Winter is Coming (Dark Black - No Italics)",
+    "workbench.iconTheme": "material-icon-theme",
+    "window.title": "${dirty}${activeEditorMedium}${separator}${remoteName}",
+    "angular.forceStrictTemplates": true,
+    "angular.disableAutomaticNgcc": false,
+    "eslint.alwaysShowStatus": true,
+    "eslint.lintTask.enable": true,
+    "eslint.packageManager": "yarn",
+    "eslint.run": "onSave"
+  },
+  "extensions": {
+    "recommendations": [
+      "Angular.ng-template",
+      "christian-kohler.npm-intellisense",
+      "christian-kohler.path-intellisense",
+      "dbaeumer.vscode-eslint",
+      "EditorConfig.EditorConfig",
+      "esbenp.prettier-vscode",
+      "lfs.vscode-emacs-friendly",
+      "MS-CEINTL.vscode-language-pack-ja",
+      "nrwl.angular-console",
+      "rbbit.typescript-hero",
+      "steoates.autoimport",
+      "Vue.volar",
+      "Zignd.html-css-class-completion"
+    ]
+  }
+}
