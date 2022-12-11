@@ -13,5 +13,6 @@ WORKDIR /usr/workspace
 
 # vscode extensions
 COPY workspace.code-workspace /root
+COPY .bashrc /root
 
 CMD [ "/bin/bash" ]

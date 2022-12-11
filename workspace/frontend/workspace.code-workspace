@@ -1,9 +1,6 @@
 {
   "folders": [
     {
-      "path": "."
-    },
-    {
       "path": "dating-app"
     }
   ],
@@ -34,7 +31,6 @@
       "ms-ceintl.vscode-language-pack-ja",
       "nrwl.angular-console",
       "steoates.autoimport",
-      "vue.volar",
       "zignd.html-css-class-completion"
     ]
   }

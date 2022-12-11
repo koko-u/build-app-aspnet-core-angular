@@ -1,0 +1,6 @@
+{
+    "/api": {
+        "target": "http://aspnet-core:5001",
+        "secure": false
+    }
+}

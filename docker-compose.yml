@@ -27,6 +27,8 @@ services:
     tty: true
     expose:
       - "5001"
+    ports:
+      - "5001:5001"
   angular-app:
     build:
       context: ./context/node-v18
@@ -36,11 +38,11 @@ services:
       - type: bind
         source: ./workspace/frontend
         target: /usr/workspace
-      # - type: volume
-      #   source: app-node_modules
-      #   target: /usr/workspace/dating-app/node_modules
-      #   volume:
-      #     nocopy: true
+      - type: volume
+        source: app-node_modules
+        target: /usr/workspace/dating-app/node_modules
+        volume:
+          nocopy: true
     tty: true
   db:
     image: mcr.microsoft.com/mssql/server:2019-CU16-GDR1-ubuntu-20.04
